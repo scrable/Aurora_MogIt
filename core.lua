@@ -36,23 +36,27 @@ end)
 
 hooksecurefunc(mog, "CreatePreview", function()
 	local f = mog.previews[#mog.previews]
-	f.model.bg:SetTexture("")
+	if not f.styled then
+		f.model.bg:SetTexture("")
 
-	for _, slot in pairs(f.slots) do
-		slot:SetNormalTexture("")
-		slot:SetPushedTexture("")
-		slot.icon:SetTexCoord(.08, .92, .08, .92)
+		for _, slot in pairs(f.slots) do
+			slot:SetNormalTexture("")
+			slot:SetPushedTexture("")
+			slot.icon:SetTexCoord(.08, .92, .08, .92)
 
-		slot.bg = F.CreateBG(slot)
+			slot.bg = F.CreateBG(slot)
+		end
+
+		local num = f:GetNumChildren()
+		for i = num, num-3, -1 do
+			styleMenuButton(select(i, f:GetChildren()))
+		end
+
+		F.ReskinPortraitFrame(f, true)
+		F.Reskin(f.activate)
+
+		f.styled = true
 	end
-
-	local num = f:GetNumChildren()
-	for i = num, num-3, -1 do
-		styleMenuButton(select(i, f:GetChildren()))
-	end
-
-	F.ReskinPortraitFrame(f, true)
-	F.Reskin(f.activate)
 end)
 
 F.ReskinPortraitFrame(frame, true)
