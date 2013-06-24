@@ -2,7 +2,7 @@
 ## Title: Aurora_MogIt
 ## Notes: MogIt plugin for Aurora and FreeUI.
 ## Author: Haleth/Freethinker
-## Version: 1.0
+## Version: 1.1
 ## RequiredDeps: MogIt
 ## OptionalDeps: FreeUI
 
