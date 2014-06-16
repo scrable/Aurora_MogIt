@@ -27,7 +27,7 @@ filt:SetPoint("TOPLEFT", mog.frame, "TOPRIGHT", 1, 0)
 hooksecurefunc(mog, "FilterUpdate", function()
 	if mog.active and mog.active.filters then
 		for k, v in ipairs(mog.active.filters) do
-			if mog.filters[v] then
+			if mog.filters[v] and mog.filters[v].bg then
 				mog.filters[v].bg:Hide()
 			end
 		end
