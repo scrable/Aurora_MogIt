@@ -6,15 +6,6 @@ local mog = MogIt
 local frame = mog.frame
 local filt = mog.filt
 
-local function styleMenuButton(menuButton)
-	menuButton.nt:SetAlpha(0)
-	menuButton:SetHighlightFontObject(GameFontHighlight)
-end
-
-for i = 5, 9 do
-	styleMenuButton(select(i, frame:GetChildren()))
-end
-
 do
 	local scroll = filt.scroll.ScrollBar
 	scroll.top:Hide()
