@@ -1,4 +1,4 @@
-## Interface: 50400
+## Interface: 80100
 ## Title: Aurora_MogIt
 ## Notes: MogIt plugin for Aurora and FreeUI.
 ## Author: Haleth/Freethinker
